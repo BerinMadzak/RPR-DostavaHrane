@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.projekat.RestaurantController">
+   <children>
+      <TabPane layoutY="49.0" prefHeight="351.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Hrana">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="600.0">
+                     <children>
+                        <ListView fx:id="foodList" layoutX="6.0" layoutY="6.0" prefHeight="259.0" prefWidth="587.0" />
+                        <Button layoutX="221.0" layoutY="283.0" mnemonicParsing="false" onAction="#addToOrderButtonPressed" prefHeight="25.0" prefWidth="157.0" text="Dodaj u narudžbu" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#orderSelected" text="Narudžba">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="orderList" layoutX="6.0" layoutY="6.0" prefHeight="259.0" prefWidth="587.0" />
+                        <Button layoutX="501.0" layoutY="274.0" mnemonicParsing="false" onAction="#orderPressed" prefHeight="34.0" prefWidth="85.0" text="NARUČI" />
+                        <Button layoutX="221.0" layoutY="283.0" mnemonicParsing="false" onAction="#removeButtonPressed" prefHeight="25.0" prefWidth="157.0" text="Izbaci" />
+                        <Label layoutX="14.0" layoutY="279.0" prefHeight="21.0" prefWidth="44.0" text="Cijena:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="priceField" alignment="CENTER_RIGHT" layoutX="58.0" layoutY="277.0" prefHeight="26.0" prefWidth="69.0" text="0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="restaurantName" alignment="CENTER" layoutY="-1.0" prefHeight="47.0" prefWidth="600.0" text="Restaurant Name">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

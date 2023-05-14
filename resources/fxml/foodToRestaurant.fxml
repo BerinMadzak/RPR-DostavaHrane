@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.projekat.FoodToRestaurantController">
+   <children>
+      <ListView fx:id="foodList" prefHeight="265.0" prefWidth="462.0" />
+      <AnchorPane prefHeight="49.0" prefWidth="462.0">
+         <children>
+            <Button layoutX="205.0" layoutY="12.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="25.0" prefWidth="65.0" text="Dodaj " />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

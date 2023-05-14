@@ -1,0 +1,7 @@
+.fieldValid{
+    -fx-control-inner-background: greenyellow;
+}
+
+.fieldInvalid{
+    -fx-control-inner-background: lightpink;
+}
